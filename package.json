@@ -1,8 +1,8 @@
 {
-  "name": "scanium-site",
+  "name": "gtemp1-site",
   "type": "module",
   "version": "1.0.0",
-  "description": "Scanium website with i18n support",
+  "description": "Gtemp1 company website with i18n support",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

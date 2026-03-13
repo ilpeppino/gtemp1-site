@@ -1,12 +1,10 @@
 ---
 const {
-  eyebrow = "AI-powered resale toolkit",
-  titleLines = ["Scan it.", "Select it.", "Sell it."],
-  description = "AI-powered object detection and pricing in your pocket. Turn piles of inventory into clean, ready-to-list data in minutes.",
-  ctaPrimary = "Get the app",
-  ctaGithub = "GitHub",
-  liveScan = "Live Scan",
-  detected = "Detected: Mid-century chair",
+  eyebrow = "Independent software studio",
+  titleLines = ["Focused products.", "Clear purpose.", "Built to grow."],
+  description = "Gtemp1 builds practical digital products with strong usability and solid technical foundations. Explore the applications we are building today, starting with LagaLaga.",
+  ctaPrimary = "Explore apps",
+  ctaSecondary = "View LagaLaga",
 } = Astro.props;
 
 const splitLine = (line) => ({
@@ -14,7 +12,7 @@ const splitLine = (line) => ({
   rest: line.slice(1),
 });
 ---
-<section class="hero relative overflow-hidden pt-28" aria-labelledby="hero-title">
+<section id="home" class="hero relative overflow-hidden pt-28" aria-labelledby="hero-title">
   <div class="hero-bg-layer absolute inset-0 hero-grid opacity-40"></div>
   <div class="hero-mid-layer pointer-events-none absolute inset-0">
     <div class="absolute left-10 top-24 h-32 w-32 rounded-full bg-scanium-cyan/20 blur-2xl"></div>
@@ -26,27 +24,22 @@ const splitLine = (line) => ({
     <div class="max-w-xl">
       <p class="mb-4 text-sm uppercase tracking-[0.4em] text-scanium-cyan">{eyebrow}</p>
       <h1 id="hero-title" class="section-title text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-        <span class="text-scanium-yellow">{splitLine(titleLines[0]).initial}</span>{splitLine(titleLines[0]).rest}
-        <span class="text-scanium-yellow">{splitLine(titleLines[1]).initial}</span>{splitLine(titleLines[1]).rest}
+        <span class="text-scanium-yellow">{splitLine(titleLines[0]).initial}</span>{splitLine(titleLines[0]).rest}<br />
+        <span class="text-scanium-yellow">{splitLine(titleLines[1]).initial}</span>{splitLine(titleLines[1]).rest}<br />
         <span class="text-scanium-yellow">{splitLine(titleLines[2]).initial}</span>{splitLine(titleLines[2]).rest}
       </h1>
       <p class="mt-6 text-lg text-text-muted">
         {description}
       </p>
       <div class="mt-10 flex flex-wrap items-center gap-4">
-        <a href="#download" class="glow-border inline-flex items-center rounded-full bg-scanium-blue px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-scanium-blue/40 transition hover:-translate-y-0.5">
+        <a href="#apps" class="glow-border inline-flex items-center rounded-full bg-scanium-blue px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-scanium-blue/40 transition hover:-translate-y-0.5">
           {ctaPrimary}
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.scanium.app" aria-label="Get Scanium on Google Play">
-          <img src="/assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="h-12 w-auto" />
-        </a>
         <a
-          href="https://github.com/ilpeppino/scanium"
-          class="glow-border inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-white/10"
-          aria-label="View Scanium on GitHub"
+          href="#lagalaga"
+          class="glow-border inline-flex items-center rounded-full bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-white/10"
         >
-          <img src="/assets/badges/github-mark-white.svg" alt="" class="h-4 w-4" />
-          {ctaGithub}
+          {ctaSecondary}
         </a>
       </div>
     </div>
@@ -57,19 +50,19 @@ const splitLine = (line) => ({
       <div class="floaty relative overflow-hidden rounded-[32px] border border-white/10 bg-navy-light/80 p-4 shadow-2xl shadow-black/50">
         <div class="hero-beam"></div>
         <div class="rounded-[24px] border border-white/10 bg-gradient-to-b from-white/5 to-transparent p-6">
-          <div class="mb-6 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-text-muted">
-            <span>Scanium</span>
-            <span>{liveScan}</span>
+          <div class="mb-4 text-xs uppercase tracking-[0.3em] text-text-muted">Featured app</div>
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-white">LagaLaga</h2>
+            <p class="mt-2 text-sm text-text-muted">Social gaming, organized.</p>
           </div>
-          <div class="relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br from-scanium-blue/10 via-transparent to-scanium-cyan/20">
-            <div class="absolute inset-0 border border-scanium-cyan/40"></div>
-            <div class="absolute left-10 top-14 h-16 w-24 rounded-xl border border-scanium-yellow/60"></div>
-            <div class="absolute right-12 bottom-20 h-10 w-20 rounded-lg border border-white/40"></div>
-            <div class="absolute bottom-6 left-6 rounded-full bg-white/10 px-3 py-1 text-xs text-white">$42 - $58</div>
+          <div class="relative h-48 overflow-hidden rounded-2xl bg-gradient-to-br from-scanium-blue/20 via-transparent to-scanium-cyan/20">
+            <div class="absolute inset-0 border border-scanium-cyan/20"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-5xl font-black tracking-tight text-white/20">LL</span>
+            </div>
           </div>
-          <div class="mt-6 flex items-center justify-between rounded-full bg-white/5 px-4 py-3 text-xs text-text-muted">
-            <span>{detected}</span>
-            <span class="text-scanium-cyan">98%</span>
+          <div class="mt-4 rounded-full bg-white/5 px-4 py-2 text-center text-xs text-text-muted">
+            Roblox session organizer
           </div>
         </div>
       </div>

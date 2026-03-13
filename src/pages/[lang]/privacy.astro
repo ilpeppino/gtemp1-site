@@ -15,12 +15,11 @@ const t = translations[lang] ?? translations[defaultLocale];
 const basePath = `/${lang}`;
 ---
 
-<BaseLayout title={`Scanium ${t.privacy.title}`} description={t.privacy.description} lang={lang}>
+<BaseLayout title={t.privacy.title} description={t.privacy.description} lang={lang}>
   <Header
     downloadLabel={t.header.download}
     languageLabel={t.header.languageLabel}
     homeHref={`${basePath}/`}
-    downloadHref={`${basePath}/#download`}
   />
   <main id="main" class="mx-auto max-w-4xl px-6 pb-24 pt-24">
     <div class="mb-10">
